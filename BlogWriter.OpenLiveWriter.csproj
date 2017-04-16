@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67216862-48D5-4291-8371-4781F86AAA6F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlogWriter.OpenLiveWriter</RootNamespace>
+    <AssemblyName>BlogWriter.OpenLiveWriter</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\ContentCreationException.cs" />
+    <Compile Include="Api\HtmlServices.cs" />
+    <Compile Include="Api\InsertableContentSourceAttribute.cs" />
+    <Compile Include="Api\IPostInfo.cs" />
+    <Compile Include="Api\IProperties.cs" />
+    <Compile Include="Api\IPublishingContext.cs" />
+    <Compile Include="Api\LiveClipboardContentSourceAttribute.cs" />
+    <Compile Include="Api\UrlContentSourceAttribute.cs" />
+    <Compile Include="Api\WriterPluginAttribute.cs" />
+    <Compile Include="ApplicationDiagnostics.cs" />
+    <Compile Include="ApplicationEnvironment.cs" />
+    <Compile Include="BlogClient\Blog.cs" />
+    <Compile Include="BlogClient\BlogClientBase.cs" />
+    <Compile Include="BlogClient\BlogClientHelper.cs" />
+    <Compile Include="BlogClient\BlogDescriptor.cs" />
+    <Compile Include="BlogClient\Clients\AtomClient.cs" />
+    <Compile Include="BlogClient\Clients\AtomContentValue.cs" />
+    <Compile Include="BlogClient\Clients\AtomEntry.cs" />
+    <Compile Include="BlogClient\Clients\AtomMediaUploader.cs" />
+    <Compile Include="BlogClient\Clients\AtomProtocolVersion.cs" />
+    <Compile Include="BlogClient\Clients\BlogClientManager.cs" />
+    <Compile Include="BlogClient\Clients\BloggerCompatibleClient.cs" />
+    <Compile Include="BlogClient\Clients\GoogleBloggerv3Client.cs" />
+    <Compile Include="BlogClient\Clients\LineBreakInputFormatters.cs" />
+    <Compile Include="BlogClient\Clients\LiveJournalClient.cs" />
+    <Compile Include="BlogClient\Clients\MetaweblogClient.cs" />
+    <Compile Include="BlogClient\Clients\MovableTypeClient.cs" />
+    <Compile Include="BlogClient\Clients\RedirectHelper.cs" />
+    <Compile Include="BlogClient\Clients\WordPressClient.cs" />
+    <Compile Include="BlogClient\Clients\XmlRestRequestHelper.cs" />
+    <Compile Include="BlogClient\Clients\XmlRpcBlogClient.cs" />
+    <Compile Include="BlogClient\Detection\BlogAccountDetector.cs" />
+    <Compile Include="BlogClient\Detection\BloggerDetectionHelper.cs" />
+    <Compile Include="BlogClient\Detection\BlogServiceDetector.cs" />
+    <Compile Include="BlogClient\Detection\RsdServiceDetector.cs" />
+    <Compile Include="BlogClient\IBlogCredentials.cs" />
+    <Compile Include="BlogClient\IBlogSettingsAccessor.cs" />
+    <Compile Include="BlogClient\ICredentialsDomain.cs" />
+    <Compile Include="BlogClient\PostFormatOptions.cs" />
+    <Compile Include="BlogClient\Providers\BlogProvider.cs" />
+    <Compile Include="BlogClient\Providers\BlogProviderFromXml.cs" />
+    <Compile Include="BlogClient\Providers\BlogProviderManager.cs" />
+    <Compile Include="BlogClient\Providers\BlogProviderParameters.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CoreServices\ApplicationConstants.cs" />
+    <Compile Include="CoreServices\ArrayHelper.cs" />
+    <Compile Include="CoreServices\ConditionVariable.cs" />
+    <Compile Include="CoreServices\DefaultHashtable.cs" />
+    <Compile Include="CoreServices\DelayedCancellableSignal.cs" />
+    <Compile Include="CoreServices\DelegateDisposable.cs" />
+    <Compile Include="CoreServices\Diagnostics\ExceptionMessage.cs" />
+    <Compile Include="CoreServices\DisplayableException.cs" />
+    <Compile Include="CoreServices\Exceptions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exceptions.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CoreServices\InvokeInUIThreadDelegate.cs" />
+    <Compile Include="CoreServices\ISet.cs" />
+    <Compile Include="CoreServices\LazyLoader.cs" />
+    <Compile Include="CoreServices\LineEndingHelper.cs" />
+    <Compile Include="CoreServices\LinkedList.cs" />
+    <Compile Include="CoreServices\MathHelper.cs" />
+    <Compile Include="CoreServices\Mime\MimeHelper.cs" />
+    <Compile Include="CoreServices\Mime\MimeHelperException.cs" />
+    <Compile Include="CoreServices\NumberHelper.cs" />
+    <Compile Include="CoreServices\Progress\IProgressHost.cs" />
+    <Compile Include="CoreServices\Progress\SilentProgressHost.cs" />
+    <Compile Include="CoreServices\StreamHelper.cs" />
+    <Compile Include="CoreServices\StringHelper.cs" />
+    <Compile Include="CoreServices\StringTokenizer.cs" />
+    <Compile Include="CoreServices\ThreadSafeQueue.cs" />
+    <Compile Include="CoreServices\TreeSet.cs" />
+    <Compile Include="CoreServices\WebRequest\ContentTypeHelper.cs" />
+    <Compile Include="CoreServices\WebRequest\HttpRequestHelper.cs" />
+    <Compile Include="CoreServices\WebRequest\IBrowserBasedWebRequest.cs" />
+    <Compile Include="CoreServices\WebRequest\UrlHelper.cs" />
+    <Compile Include="CoreServices\WebRequest\WebProxySettings.cs" />
+    <Compile Include="CoreServices\XmlCharacterHelper.cs" />
+    <Compile Include="CoreServices\XmlHelper.cs" />
+    <Compile Include="CoreServices\XmlPreprocessor.cs" />
+    <Compile Include="CoreServices\XmlRpcClient.cs" />
+    <Compile Include="CoreServices\XmpMetadata.cs" />
+    <Compile Include="Extensibility\BlogClient\BlogAccount.cs" />
+    <Compile Include="Extensibility\BlogClient\BlogClientException.cs" />
+    <Compile Include="Extensibility\BlogClient\BlogInfo.cs" />
+    <Compile Include="Extensibility\BlogClient\BlogPost.cs" />
+    <Compile Include="Extensibility\BlogClient\BlogPostCategory.cs" />
+    <Compile Include="Extensibility\BlogClient\BlogPostKeyword.cs" />
+    <Compile Include="Extensibility\BlogClient\IBlogClient.cs" />
+    <Compile Include="Extensibility\BlogClient\IBlogPostContentFilter.cs" />
+    <Compile Include="Extensibility\BlogClient\IBlogProvider.cs" />
+    <Compile Include="Extensibility\BlogClient\IBlogProviderButtonDescription.cs" />
+    <Compile Include="Extensibility\BlogClient\RsdServiceDescription.cs" />
+    <Compile Include="HtmlParser\FormAgent\Checkbox.cs" />
+    <Compile Include="HtmlParser\FormAgent\FormData.cs" />
+    <Compile Include="HtmlParser\FormAgent\FormElement.cs" />
+    <Compile Include="HtmlParser\FormAgent\FormElementWithValue.cs" />
+    <Compile Include="HtmlParser\FormAgent\FormFactory.cs" />
+    <Compile Include="HtmlParser\FormAgent\Hidden.cs" />
+    <Compile Include="HtmlParser\FormAgent\HtmlForm.cs" />
+    <Compile Include="HtmlParser\FormAgent\ImageButton.cs" />
+    <Compile Include="HtmlParser\FormAgent\Option.cs" />
+    <Compile Include="HtmlParser\FormAgent\OptionInfo.cs" />
+    <Compile Include="HtmlParser\FormAgent\Radio.cs" />
+    <Compile Include="HtmlParser\FormAgent\Select.cs" />
+    <Compile Include="HtmlParser\FormAgent\SubmitButton.cs" />
+    <Compile Include="HtmlParser\FormAgent\Textarea.cs" />
+    <Compile Include="HtmlParser\FormAgent\Textbox.cs" />
+    <Compile Include="HtmlParser\Parser\CssParser.cs" />
+    <Compile Include="HtmlParser\Parser\Element.cs" />
+    <Compile Include="HtmlParser\Parser\HtmlExtractor.cs" />
+    <Compile Include="HtmlParser\Parser\HtmlUtils.cs" />
+    <Compile Include="HtmlParser\Parser\IElementSource.cs" />
+    <Compile Include="HtmlParser\Parser\JavascriptParser.cs" />
+    <Compile Include="HtmlParser\Parser\LiteralElementMethods.cs" />
+    <Compile Include="HtmlParser\Parser\ParseMethods.cs" />
+    <Compile Include="HtmlParser\Parser\ReplaceOperation.cs" />
+    <Compile Include="HtmlParser\Parser\SimpleHtmlParser.cs" />
+    <Compile Include="ICloneable.cs" />
+    <Compile Include="Localisation\CommandId.cs" />
+    <Compile Include="Localisation\MessageId.cs" />
+    <Compile Include="Localisation\StringId.cs" />
+    <Compile Include="MimeTypes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlNamespaceHelper.cs" />
+    <Content Include="BlogClient\Images\information.png" />
+    <Content Include="BlogClient\Images\WordPressFav.ico" />
+    <Content Include="BlogClient\OpenLiveWriter.BlogClient.csproj" />
+    <Content Include="BlogClient\Providers\BlogProvidersB5.xml" />
+    <Content Include="CoreServices\Diagnostics\Images\ErrorLogoSmall.png" />
+    <Content Include="CoreServices\Images\ApplicationIcon.ico" />
+    <Content Include="CoreServices\Images\SplashScreen.png" />
+    <Content Include="CoreServices\Images\SplashScreenLogo.jpg" />
+    <Content Include="CoreServices\Images\WarningLogoSmall.png" />
+    <Content Include="HtmlParser\FormAgent\test1.htm" />
+    <Content Include="Properties\BlogWriter.OpenLiveWriter.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CoreServices\Exceptions.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Exceptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
